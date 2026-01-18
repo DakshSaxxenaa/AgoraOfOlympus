@@ -14,10 +14,10 @@ import fs from "fs";
 import path from "path";
 
 
-dotenv.config({
-  path: path.resolve(process.cwd(), ".env"),
-});
 
+  dotenv.config({
+    path: path.resolve(process.cwd(), ".env"),
+  });
 
 connectDB();
 
@@ -29,6 +29,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: "http://localhost:5173",
+
     credentials: true,
   })
 );
