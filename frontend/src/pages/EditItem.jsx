@@ -65,8 +65,8 @@ const EditItem = () => {
     );
 
   return (
-    <div className="max-w-2xl mx-auto mt-10 p-6 rounded-xl bg-[#1f2937]/80 border border-gray-700 backdrop-blur-lg shadow-lg">
-      <h2 className="text-2xl font-bold mb-6 text-white text-center tracking-wide">
+    <div className="max-w-2xl mx-auto mt-6 sm:mt-10 p-4 sm:p-6 rounded-xl bg-[#1f2937]/80 border border-gray-700 backdrop-blur-lg shadow-lg">
+      <h2 className="text-xl sm:text-2xl font-bold mb-6 text-white text-center tracking-wide">
         Edit Item
       </h2>
 
@@ -131,10 +131,10 @@ const EditItem = () => {
         </select>
 
         
-        <label className="flex flex-col items-center justify-center w-full h-48 border-2 border-dashed border-purple-500 rounded-xl cursor-pointer bg-gray-900/50 hover:bg-gray-900/70 transition">
-          <div className="flex flex-col items-center justify-center pt-5 pb-6 text-gray-300">
+        <label className="flex flex-col items-center justify-center w-full h-40 sm:h-48 border-2 border-dashed border-purple-500 rounded-xl cursor-pointer bg-gray-900/50 hover:bg-gray-900/70 transition">
+          <div className="flex flex-col items-center justify-center pt-4 pb-5 sm:pt-5 sm:pb-6 text-gray-300">
             <svg
-              className="w-10 h-10 mb-3 text-purple-400"
+              className="w-8 h-8 sm:w-10 sm:h-10 mb-3 text-purple-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -166,10 +166,10 @@ const EditItem = () => {
         )}
 
         
-        <div className="flex gap-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <button
             type="submit"
-            className="flex-1 bg-purple-600 hover:bg-purple-500 text-black font-semibold px-4 py-2 rounded-xl shadow-lg transition-all"
+            className="flex-1 bg-purple-600 hover:bg-purple-500 text-black text-sm sm:text-base font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl shadow-lg transition-all"
           >
             Update Item
           </button>
@@ -177,7 +177,7 @@ const EditItem = () => {
           <button
             type="button"
             onClick={() => navigate("/")}
-            className="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-semibold px-4 py-2 rounded-xl shadow-lg transition-all"
+            className="flex-1 bg-gray-700 hover:bg-gray-600 text-white text-sm sm:text-base font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl shadow-lg transition-all"
           >
             Home
           </button>

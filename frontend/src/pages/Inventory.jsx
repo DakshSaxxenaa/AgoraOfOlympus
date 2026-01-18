@@ -58,28 +58,28 @@ const Inventory = () => {
     );
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6 text-white tracking-wide">
-        My Armory
+    <div className="max-w-6xl mx-auto p-4 sm:p-6">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-white tracking-wide">
+        My Inventory
       </h1>
 
       {items.length === 0 ? (
-        <p className="text-gray-400">No items in your armory yet.</p>
+        <p className="text-gray-400">No items in your Inventory yet.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {items.map((item, idx) => (
             <div
               key={`${item._id}-${idx}`}
-              className="bg-[#1f2937]/80 border border-gray-700 backdrop-blur-lg rounded-xl p-4 shadow-lg transition hover:scale-[1.02]"
+              className="w-[90%] sm:w-full mx-auto bg-[#1f2937]/80 border border-gray-700 backdrop-blur-lg rounded-xl p-4 shadow-lg transition hover:scale-[1.02]"
             >
               
               <img
                 src={item.image}
                 alt={item.name}
-                className="h-40 w-full object-cover rounded-lg mb-3"
+                className="h-32 sm:h-40 w-full object-contain rounded-lg mb-3"
               />
 
-              <h3 className="font-semibold text-white text-lg">{item.name}</h3>
+              <h3 className="font-semibold text-white text-base sm:text-lg">{item.name}</h3>
               <p className="text-sm text-gray-400 mb-2">{item.rarity}</p>
 
               <p className="text-sm text-gray-300 mb-2">
@@ -113,7 +113,7 @@ const Inventory = () => {
 
               <button
                 onClick={() => handleRemove(item._id)}
-                className="mt-4 w-full bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-xl shadow-lg transition-all"
+                className="mt-4 w-full bg-red-600 hover:bg-red-700 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl shadow-lg transition-all"
               >
                 Remove from Inventory
               </button>

@@ -33,7 +33,7 @@ A full-stack MERN application that functions as a gamified marketplace and socia
 - **Messaging System**
   - Buyer - Seller conversations
 
-- **Profile & Armory**
+- **Profile & Inventory**
   - View personal listed items
   - Track interested & purchased items
 

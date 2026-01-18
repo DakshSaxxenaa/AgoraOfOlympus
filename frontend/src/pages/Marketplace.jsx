@@ -34,13 +34,13 @@ const Marketplace = () => {
   const rarities = [...new Set(items.map(i => i.rarity))];
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="max-w-6xl mx-auto p-4 sm:p-6">
       
-      <div className="flex gap-4 mb-6 flex-wrap">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6">
         <select
           value={categoryFilter}
           onChange={(e) => setCategoryFilter(e.target.value)}
-          className="bg-[#111827] border border-gray-600 text-white px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full sm:w-auto bg-[#111827] border border-gray-600 text-white px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
         >
           <option value="">All Categories</option>
           {categories.map(cat => (
@@ -51,7 +51,7 @@ const Marketplace = () => {
         <select
           value={rarityFilter}
           onChange={(e) => setRarityFilter(e.target.value)}
-          className="bg-[#111827] border border-gray-600 text-white px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full sm:w-auto bg-[#111827] border border-gray-600 text-white px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
         >
           <option value="">All Rarities</option>
           {rarities.map(r => (
@@ -64,17 +64,17 @@ const Marketplace = () => {
       {filteredItems.length === 0 ? (
         <p className="text-center text-gray-400 mt-10">No items found.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredItems.map(item => (
             <div
               key={item._id}
               onClick={() => navigate(`/items/${item._id}`)}
-              className="bg-[#1f2937]/90 border border-gray-700 rounded-lg shadow-lg cursor-pointer hover:shadow-purple-500/50 hover:scale-105 transform transition-all duration-300 overflow-hidden"
+              className="w-[90%] sm:w-full mx-auto bg-[#1f2937]/90 border border-gray-700 rounded-lg shadow-lg cursor-pointer hover:shadow-purple-500/50 hover:scale-105 transform transition-all duration-300 overflow-hidden"
             >
               <img
                 src={item.image}
                 alt={item.name}
-                className="h-44 w-full object-cover rounded-t-lg"
+                className="h-36 sm:h-44 w-full object-contain rounded-t-lg"
               />
               <div className="p-4">
                 <h3 className="text-white font-semibold text-lg">{item.name}</h3>

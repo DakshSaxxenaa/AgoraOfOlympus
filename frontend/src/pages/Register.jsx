@@ -35,8 +35,8 @@ const Register = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-20 p-6 bg-[#111827] rounded shadow text-white">
-      <h2 className="text-2xl font-bold mb-4 text-white">Register</h2>
+    <div className="max-w-md mx-auto mt-10 sm:mt-20 p-4 sm:p-6 bg-[#111827] rounded shadow text-white">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4 text-white">Register</h2>
 
       {error && (
         <div className="bg-red-600 bg-opacity-20 text-red-400 p-2 mb-4 rounded">
@@ -44,11 +44,11 @@ const Register = () => {
         </div>
       )}
 
-      <form onSubmit={handleRegister} className="space-y-4">
+      <form onSubmit={handleRegister} className="space-y-3 sm:space-y-4">
         <input
           type="text"
           placeholder="Username"
-          className="w-full border border-gray-600 bg-[#1f2937] text-white p-2 rounded focus:outline-none focus:ring focus:ring-purple-500"
+          className="w-full border border-gray-600 bg-[#1f2937] text-white text-sm sm:text-base p-2 rounded focus:outline-none focus:ring focus:ring-purple-500"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
@@ -57,7 +57,7 @@ const Register = () => {
         <input
           type="email"
           placeholder="Email"
-          className="w-full border border-gray-600 bg-[#1f2937] text-white p-2 rounded focus:outline-none focus:ring focus:ring-purple-500"
+          className="w-full border border-gray-600 bg-[#1f2937] text-white text-sm sm:text-base p-2 rounded focus:outline-none focus:ring focus:ring-purple-500"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -66,7 +66,7 @@ const Register = () => {
         <input
           type="password"
           placeholder="Password"
-          className="w-full border border-gray-600 bg-[#1f2937] text-white p-2 rounded focus:outline-none focus:ring focus:ring-purple-500"
+          className="w-full border border-gray-600 bg-[#1f2937] text-white text-sm sm:text-base p-2 rounded focus:outline-none focus:ring focus:ring-purple-500"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -75,7 +75,7 @@ const Register = () => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-purple-700 hover:bg-purple-800 text-white p-2 rounded transition"
+          className="w-full bg-purple-700 hover:bg-purple-800 text-white text-sm sm:text-base p-2 rounded transition"
         >
           {loading ? "Registering..." : "Register"}
         </button>
@@ -83,7 +83,7 @@ const Register = () => {
         <button
           type="button"
           onClick={() => navigate("/")}
-          className="w-full bg-purple-700 hover:bg-purple-800 text-white p-2 rounded transition"
+          className="w-full bg-purple-700 hover:bg-purple-800 text-white text-sm sm:text-base p-2 rounded transition"
         >
           Home
         </button>

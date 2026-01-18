@@ -33,9 +33,9 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-[85vh]">
-      <div className="w-full max-w-md p-8 bg-[#1f2937]/80 backdrop-blur-lg rounded-xl shadow-lg text-white">
-        <h2 className="text-3xl font-bold mb-6 text-center text-purple-400">
+    <div className="flex items-center justify-center min-h-[85vh] px-4">
+      <div className="w-full max-w-md p-6 sm:p-8 bg-[#1f2937]/80 backdrop-blur-lg rounded-xl shadow-lg text-white">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-center text-purple-400">
           Login to Agora of Olympus
         </h2>
 
@@ -45,11 +45,11 @@ const Login = () => {
           </div>
         )}
 
-        <form onSubmit={handleLogin} className="space-y-4">
+        <form onSubmit={handleLogin} className="space-y-3 sm:space-y-4">
           <input
             type="email"
             placeholder="Email"
-            className="w-full border border-gray-600 bg-[#111827] p-3 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full border border-gray-600 bg-[#111827] p-2 sm:p-3 text-sm sm:text-base rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -58,7 +58,7 @@ const Login = () => {
           <input
             type="password"
             placeholder="Password"
-            className="w-full border border-gray-600 bg-[#111827] p-3 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full border border-gray-600 bg-[#111827] p-2 sm:p-3 text-sm sm:text-base rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -67,7 +67,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-purple-700 hover:bg-purple-600 text-white font-semibold p-3 rounded transition-all"
+            className="w-full bg-purple-700 hover:bg-purple-600 text-white font-semibold p-2 sm:p-3 text-sm sm:text-base rounded transition-all"
           >
             {loading ? "Logging in..." : "Login"}
           </button>
@@ -75,7 +75,7 @@ const Login = () => {
           <button
             type="button"
             onClick={() => navigate("/")}
-            className="w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold p-3 rounded transition-all"
+            className="w-full bg-gray-700 hover:bg-gray-600 text-white font-semibold p-2 sm:p-3 text-sm sm:text-base rounded transition-all"
           >
             Home
           </button>

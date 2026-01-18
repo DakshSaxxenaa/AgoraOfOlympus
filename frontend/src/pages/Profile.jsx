@@ -32,30 +32,30 @@ const Profile = () => {
   
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-[#111827] min-h-screen text-white">
+    <div className="max-w-6xl mx-auto p-4 sm:p-6 bg-[#111827] min-h-screen text-white">
       
-      <div className="bg-[#1f2937] p-6 rounded shadow mb-8 flex items-center gap-4">
+      <div className="bg-[#1f2937] p-4 sm:p-6 rounded shadow mb-6 sm:mb-8 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
         <div>
-          <h1 className="text-3xl font-bold">{user?.username}</h1>
-          <p className="text-gray-400">{user?.email}</p>
+          <h1 className="text-2xl sm:text-3xl font-bold">{user?.username}</h1>
+          <p className="text-gray-400 text-sm sm:text-base">{user?.email}</p>
         </div>
       </div>
 
       
-      <div className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">My Listed Items</h2>
+      <div className="mb-8 sm:mb-10">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-4">My Listed Items</h2>
         {items.length === 0 ? (
           <p className="text-gray-400">No items listed yet.</p>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {items.map((item) => (
               <div
                 key={item._id}
-                className="bg-[#1f2937] p-4 rounded shadow hover:bg-[#272c37] transition cursor-pointer"
+                className="w-[90%] sm:w-full mx-auto bg-[#1f2937] p-4 rounded shadow hover:bg-[#272c37] transition cursor-pointer"
               >
                 <img
                   src={item.image}
-                  className="h-40 w-full object-cover rounded"
+                  className="h-40 w-full object-contain rounded"
                 />
                 <h3 className="font-semibold mt-2 text-white">{item.name}</h3>
               </div>
@@ -65,8 +65,8 @@ const Profile = () => {
       </div>
 
       <div>
-        <div className="flex justify-between mb-4">
-          <h2 className="text-2xl font-semibold">Recent Chats</h2>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 mb-4">
+          <h2 className="text-xl sm:text-2xl font-semibold">Recent Chats</h2>
           <Link to="/messages" className="text-blue-400 hover:underline">
             View All
           </Link>
