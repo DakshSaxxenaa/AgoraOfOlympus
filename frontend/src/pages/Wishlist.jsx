@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { getWishlist, removeFromWishlist } from "../services/wishlist.service";
 import { useNavigate } from "react-router-dom";
