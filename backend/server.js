@@ -1,15 +1,15 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import connectDB from "./config/db.js";
-import authRoutes from "./routes/auth.routes.js";
-import itemRoutes from "./routes/item.routes.js";
-import messageRoutes from "./routes/message.routes.js";
-import inventoryRoutes from "./routes/inventory.routes.js";
-import wishlistRoutes from "./routes/wishlist.routes.js";
-import cartRoutes from "./routes/cart.routes.js";
-import ratingRoutes from "./routes/rating.routes.js";
-import userRoutes from "./routes/user.routes.js";
+import connectDB from "./src/config/db.js";
+import authRoutes from "./src/routes/auth.routes.js";
+import itemRoutes from "./src/routes/item.routes.js";
+import messageRoutes from "./src/routes/message.routes.js";
+import inventoryRoutes from "./src/routes/inventory.routes.js";
+import wishlistRoutes from "./src/routes/wishlist.routes.js";
+import cartRoutes from "./src/routes/cart.routes.js";
+import ratingRoutes from "./src/routes/rating.routes.js";
+import userRoutes from "./src/routes/user.routes.js";
 import fs from "fs";
 import path from "path";
 
@@ -28,7 +28,8 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    // origin: "http://localhost:5173",
+    origin: "https://agoraofolympus.netlify.app",
 
     credentials: true,
   })
