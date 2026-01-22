@@ -2,6 +2,16 @@
 
 A full-stack MERN application that functions as a gamified marketplace and social messaging platform. Users can authenticate, list items, manage carts and wishlists, rate items, message sellers, and interact inside an in-app marketplace experience.
 
+## Live Demo
+
+ Service     Platform      URL 
+---------    ---------    -----
+ Frontend    Netlify      [agoraofolympus.netlify.app](https://agoraofolympus.netlify.app) 
+ Backend     Back4app     Containerized API 
+ Database    MongoDB      Atlas Cloud-hosted 
+
+> **Note:** The backend is deployed on Back4app's free tier for testing purposes. The container goes to sleep after 60 minutes of inactivity.
+
 ## Tech Stack
 
 **Frontend**
