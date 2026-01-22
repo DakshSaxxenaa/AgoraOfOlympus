@@ -7,10 +7,8 @@ A full-stack MERN application that functions as a gamified marketplace and socia
  Service     Platform      URL 
 ---------    ---------    -----
  Frontend    Netlify      [agoraofolympus.netlify.app](https://agoraofolympus.netlify.app) 
- Backend     Back4app     Containerized API 
+ Backend     Local        localhost:5000 
  Database    MongoDB      Atlas Cloud-hosted 
-
-> **Note:** The backend is deployed on Back4app's free tier for testing purposes. The container goes to sleep after 60 minutes of inactivity.
 
 ## Tech Stack
 
